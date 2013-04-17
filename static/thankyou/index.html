@@ -1,19 +1,22 @@
 <html>
 <head>
-	<style>
+		<link href='http://fonts.googleapis.com/css?family=Ovo' type='text/css'>
+		<style>
 		body {
-			background:rgb(255, 252, 249);
+			background: #F1F0DC;
 			text-align: center;
 			font-family: Georgia;
 		}
 		#thanksBox {
-			width: 70%;
-			height: 60%;
-			padding: 3%;
+			width: 630px;
+			height: 515px;
 			margin: 0 auto;
 			background: white;
-			box-shadow: 1px 1px 7px #555;
 			overflow: hidden;
+			position: absolute;
+			top: 90px;
+			left: 50%;
+			margin-left: -315px;
 
 		}
 		#thanks {
@@ -27,16 +30,16 @@
 			margin: 4px 0 22px;
 			letter-spacing: 1px;
 		}
-		#logo {
-			width: 300px;
+		#frame {
 			margin: 0 auto;
 			display: block;
 		}
 		.name {
 			display: inline-block;
 			position: absolute;
-			font-size: 22px;
-			font-family: Georgia;
+			font-size: 17px;
+			color: #222;
+			font-family: Ovo, Georgia;
 			opacity: 0;
 			white-space: nowrap;
 		}
@@ -44,13 +47,12 @@
 </head>
 
 <body>
-<img id="logo" src="/img/adobe-books.jpg" />
-<div id="tagline">THANK YOU to the 604 people from 6 countries and 22 states who donated to our future.</div>
+<img id="frame" src="../img/thank_you_page.png" />
 <div id="thanksBox">
 	<div id="thanks"></div>
 </div>
 
-<script src="/jquery.js"></script>
+<script src="../jquery.js"></script>
 <script>
 	var width = $("#thanks").width() - 100;
 	var height = $("#thanks").height() - 40;
@@ -63,7 +65,7 @@
 
 	names = shuffle(names);
 	var n = 0;
-	var vert = shuffle([0,1,2,3,4,5,6,7,8,9,10,11,12]);
+	var vert = shuffle([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]);
 	var step = 0;
 
 	var animateName = function(name) {
@@ -76,8 +78,8 @@
 			step = (step + 1) % vert.length; 
 
 			$("<div class='name' style='top:" + top  + "px;"+ sideStr + "'>" + name + "</div>").appendTo("#thanks")
-				.animate({opacity: 1}, 2000)
-				.animate({opacity: 0}, 2000, function() {
+				.animate({opacity: 1}, 2500)
+				.animate({opacity: 0}, 2500, function() {
 					$(this).remove();
 				});
 	};
