@@ -7,10 +7,15 @@
 			background: #F1F0DC;
 			text-align: center;
 			font-family: Ovo, Georgia, serif;
+			font-size: 22px;
+			line-height: 1.3;
+			padding-bottom: 20px;
 		}
 		a {
 			color: #00A3D6;
-			margin: 0 10px;
+		}
+		h2, h3 {
+			margin-bottom: 4px;
 		}
 		#thanksBox {
 			width: 630px;
@@ -48,25 +53,69 @@
 			opacity: 0;
 			white-space: nowrap;
 		}
+		.navLinkBox {
+			margin: 40px 0;
+		}
+		.navLink {
+			margin: 5px 20px;
+			font-size: 20px;
+			line-height: 28px;
+		}
+		#about {
+			margin: 80px 0;
+		}
+		#map, #calendar {
+			margin: 50px 0;
+		}
 	</style>
 </head>
 
 <body>
+
 <img id="frame" src="/img/thank_you_page.png" />
 <div id="thanksBox">
 	<div id="thanks"></div>
 </div>
-<br>
-<a href="https://www.google.com/calendar/embed?src=i7fu7cvjmvlplpt2smdnebgnf4%40group.calendar.google.com&amp;ctz=America%2FLos_Angeles">Event Calendar</a>
-<a href="http://www.adobebackroomgallery.com">Backroom Gallery</a>
-<a target="_blank" href="http://www.andrewmckinley.com">Friends of Adobe</a>
-<a target="_blank" href="http://maps.google.com/?q=3130 24th st 94110">Map</a>
-<a href="https://www.facebook.com/pages/Adobe-Books/111859948834325">Facebook</a>
-<br><br>
-<div>
-	3130 24th Street, San Francisco CA, 94110 <br>
-	Open, Monday - Friday 12-8, Saturday & Sunday 11-8 <br>
+
+<div class="navLinkBox">
+	<a class="navLink aboutLink" href="#about">About</a>
+	<a class="navLink eventsLink" href="">Event Calendar</a>
+	<a class="navLink" href="http://www.adobebackroomgallery.com">Backroom Gallery</a>
+	<a class="navLink" target="_blank" href="http://www.andrewmckinley.com">Friends of Adobe</a>
+	<a class="navLink mapLink" id="mapLink" href="">Map</a>
+	<a class="navLink" href="https://www.facebook.com/pages/Adobe-Books/111859948834325">Facebook</a>
 </div>
+
+
+<div id="about">
+	<h2>Adobe Books & Arts Cooperative</h2>
+	3130 24th Street, San Francisco CA, 94110 <br>
+	Open: Monday-Friday 12-8, Saturday & Sunday 11-8 <br>
+	<a href="tel://1-415-864-3936">(415) 864-3936</a> | <a href="mailto:hello@adobebookshop.com">hello@adobebookshop.com</a>
+
+</div>
+
+
+<div id="calendar">
+	<h4>Event Calendar</h4>
+	<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=MONTH&amp;height=700&amp;wkst=2&amp;src=i7fu7cvjmvlplpt2smdnebgnf4%40group.calendar.google.com&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="700" height="700" frameborder="0" scrolling="no"></iframe>
+</div>
+
+<div id="map">
+	<h4>Find us at 3130 24th Street, between Shotwell and Folsom</h4>
+	<iframe width="700" height="700" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=3130%2B24th%2BStreet(Adobe+Books+%26+Arts+Cooperative)&ie=UTF8&z=15&t=m&iwloc=near&output=embed"></iframe>
+	
+</div>
+
+<div class="navLinkBox">
+	<a class="navLink aboutLink" href="#about">About</a>
+	<a class="navLink eventsLink" href="">Event Calendar</a>
+	<a class="navLink" href="http://www.adobebackroomgallery.com">Backroom Gallery</a>
+	<a class="navLink" target="_blank" href="http://www.andrewmckinley.com">Friends of Adobe</a>
+	<a class="navLink mapLink" id="mapLink" href="">Map</a>
+	<a class="navLink" href="https://www.facebook.com/pages/Adobe-Books/111859948834325">Facebook</a>
+</div>
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -79,6 +128,21 @@
 </script>
 <script src="/jquery.js"></script>
 <script>
+	$(function() {
+			$(".aboutLink").click(function(e){
+				$('html, body').animate({scrollTop:$("#about").position().top - 200}, 300);
+				e.preventDefault();
+			});
+			$(".eventsLink").click(function(e){
+				$('html, body').animate({scrollTop:$("#calendar").position().top}, 300);
+				e.preventDefault();
+			});
+			$(".mapLink").click(function(e){
+				$('html, body').animate({scrollTop:$("#map").position().top}, 300);
+				e.preventDefault();
+			});
+	});
+
 	var width = $("#thanks").width() - 100;
 	var height = $("#thanks").height() - 40;
 	var names = ['Shani Heckman', 'Jenni Olson', 'Kristin Tieche', 'Evan White', 'Anne Shulock', 'Anthony Iamurri', 'Erin Nixon', 'liz walsh', 'Daniel Morgan', 'Daniel Morgan', 'Carrie Hott', 'Meghann Kabala', 'Christie Chew', 'Ara Kim', 'winter', 'Geoffrey Teague', 'Sandy Huang', 'Robert Arnold', 'Sarah Fihn', 'Wendy Crittenden', 'Jeff Ray', 'Julie Napolin', 'billy', 'Julia Bradshaw', 'Christopher Reiger', 'Sensory Revolution', 'Christopher Dare', 'Nicole Gordon', 'Ashley Meyer', 'Bosco So', 'Ivy Jeanne', 'Jeanne Park', 'Sarah Thibault', 'Laurie Reid', 'Adrianne Koteen', 'BRIDGET MAY', 'Allison L Holt', 'Mai Le', 'Alex Heilbron', 'Dav Yaginuma', 'Philip Shaw', 'Kristin Wessell', 'JP LeBreton', 'Carey Lin', 'Jeanne Gerrity', 'Erin Hoffman', 'Nathan Clevenger', 'Matt Rubin', 'Doug Beeferman', 'Mission: Comics & Art', 'Dan Girellini', 'Jesse Eisenhower', 'J. Gregory Twain', 'Collette McGruder', 'Becky Alexander', 'Nicole de Ayora', 'Nihal Oztek', 'Nicky koch', 'peter linenthal', 'peter linenthal', 'Kate Shaughnessy', 'Ingrid', 'Ryan De La Hoz', 'Tess Hand-Bender', 'Laura Maguire', 'bryna mclane', 'Gordon Edgar', 'Emily Lakin', 'Emma Logan', 'Aaron Luk', 'Fredrika Baer', 'Larissa Archer', 'Peter Gowdy', 'Daniel Winkler', 'Joe Robinson', 'Caroline Moore-Kochlacs', 'Mel Prest', 'Takehiro Sugitani', 'Coco Segaller', 'Anjulie Palta', 'Michele Nelson', 'Mary Peelen', 'Leslie Kleinberg', 'Lisa foster', 'Leigh Riley', 'Rebecca Solnit', 'Lindsey White', 'Corey Doman', 'Dave Holtz', 'jeremiah Moore', 'max kelly', 'Jennifer Barone', 'meligrosa', 'Derek Reynolds', "Ann D'Apice", 'Marissa Silverberg', 'Yasha Wallin', 'Viniita Moran - Owl Cave Books', 'Meagan Patrick', 'Pei-Ru Ko', 'Steven Scher', 'Marlena Sonn', 'Altay Guvench', 'Earl Brown', 'Brett Lockspeiser', 'Zachary Epcar', 'Arch Drafting Supplies', 'Andy Lynch', 'yanika schneider', 'Dina Dobkin', 'Kara Q. Smith', 'Judith Zissman', 'Shane Michalik', 'Maxwell A Croy', 'Eileen Cukier', 'arielle', 'Paco Marquez', 'Michael Moran', 'Geoffrey Cullen', 'Reggie Sparks', 'Mieko Saito', 'Anna M Lincoln', 'Erin Donohue', 'D. Fruehe', 'heidi anderson', 'Lana Beckett', 'Michelle Barnett', 'Kyle Knobel', 'ashley peters', 'Racel Corwell ( Blondies Bar)', 'Caroline stechschulte', 'Teresa Kenny', 'Jennifer Burke', 'Mallory Leone', 'mimi lok', 'Sunnylyn Thibodeaux', 'Ari  Salomon', 'John Lee', 'Lydia Laurenson', 'Sarah Bostwick', 'taj robinson', 'Adam Souzis', 'Jenny Bitner', 'Hearth Coffee Roasters', 'gabriela laz', 'Ashley Graham', 'Ashley Graham', 'Katie Lally', 'Katie Lally', 'Katie Wheeler-Dubin', 'Gallery Hijinks', 'christina davidson', 'Joel Statz', 'Yune Lee', 'Robert Donald', 'Bill Swanson', 'Zuzana Fedorkova', 'Patty Owyang', 'Tod Booth', 'Teddy Aderholdt', 'Emanuele Vulcano', 'Sacha Arnold', 'Lauren Brunsvik', 'Greg Shimada', 'Gravity Goldberg', 'morgan miller', 'Bradley Voelker', 'Rocky Ordonez ', 'Sona Avakian', 'Sona Avakian', 'Heather Villyard', 'andrew martin scott', 'Courtney Stephens', 'jennifer donahue', 'Rachelle Reichert', 'John Young', 'Bryan Hackett', 'Heather Hickman', 'Laura celio', 'Michael Turitzin', 'tiffany', 'Amy Zimmerman', 'Annemarie Dompe', '275 Dolores Street', 'Liz Worthy', 'Karen Chong', 'Kenneth Traynor', 'Julie Vayda', 'Giorgio Spano Alessandra Cattani', 'sean', 'Linda Hagood', 'Mark Gorney', 'Christopher Lin', 'Richard Buchanan', 'niki shelley', 'Megan Brian', 'Gina M. Contreras', 'Shannon E Malloy', 'shannon malloy', 'kevin thomson', 'Ricky Castaneda', 'Chuck & Rita Cullen', 'Betsy Streeter', 'Jessica Juodvirsis', 'Daniel and Lloyda Murphy', 'Katie Edmonds', 'Gabi Rivas', 'alice gould', 'Megan Hendry', 'Elizabeth Donoghue', 'Stacy Stevenson', 'Aimee Reed', 'Andrea Huelse', 'Anna Bloom ', 'Renee Kaufman ', 'Bill Goldberg', 'dana', 'Matt Montgomery', 'The Montgables', 'Jessalyn Aaland', 'Carl Hayes', 'aalan weber md', 'Jean Yaste', 'Kendra gaeta', 'Liana Derus', 'Kelsey Innis', 'Chris & David Kelso', 'Noe Chavez', 'Tegan Broderick', 'MARCELO FRANCO', 'Richard Loranger', 'doreen Pierson', 'Amy Farah Weiss', 'Xylor Jane', 'Amy Bell', 'russell baldon', 'Linda Lagunas Atwood', 'Kim & Keith Laidlaw', 'Dina Pugh/ Imprint Projects', 'Aimee Le Duc', 'Dana Younkin', 'Kate Mitchell', 'Kirsten Harkonen', 'Jasmine Flores ', 'Maria Mortati', 'Jesse Brown', 'Hannah Barr-DiChiara', 'veronica graham', 'jessica woolard', 'claudia j ochoa', 'Rebekah Kouy-Ghadosh ', 'Adam Gutterman', 'Val Britton', 'Lucas J Shuman', 'Jayna Swartzman', 'VANESSA S MARSH', 'Stella Lochman', 'Ava Jancar', 'Sheila Imandoust', 'yukako ezoe', 'naoki onodera', 'Anne Griffith', 'Anne Griffith ', 'Anne Griffith', 'Aurelio Tinio', 'Christopher Garrett', 'Elizabeth Mattin', 'Kane Ehrler', 'Tina Wang', 'kristin farr', 'Morgan Peirce', 'Owen Lawrence', 'Caitlin Moorleghen', 'Brian Green', 'sarah moore', 'Alicia Gardner', 'Michael Ernst', 'Grant Selland', 'Matt Cline', 'Sean Harold', 'Curtis Lawler', 'George Manis', 'Kyle See', 'Lyndsey Lara', 'linda Moody', 'Robert Leiva', 'suzie kottwitz', 'Tom FitzGerald', 'Chelsea Moller', 'Alex Beakes', 'Dafna Chaffino', 'Katie Conry', 'John Shumaker', 'Jaan Shenberger', 'matthew dumas', 'Will McKleroy', 'Gordon Huang', 'Pavlos Salamasidis', 'Alec Reynolds', 'Sarah Branon', 'jacob', 'Sarah Zimmerman', 'Victoria Nam', 'Michelle Fong', 'Christian Rongavilla', 'Elena Lempel', 'Thomas Brierly', 'Megan Windeler', 'Roque Pena', 'Alexis Vogel', 'Kristina Fong', 'Caitlin Stuart', 'Evan Magers', 'Tina Wang', 'Karen Choy', 'Chris Lesnett', 'wenlin', 'garry jao', 'Jean Karnow', 'Nate Chandler', 'Erica Gangsei', 'Oliver Abbitt', 'Oliver Abbitt', 'Gail DaMert', 'Dave Pangaro', 'phoebe tooke', 'Gary Gregerson', 'Asher Feldman', 'Alec Moore', 'Rebecca Creamer', 'Christopher Miranda', 'Aimee Shapiro', 'Kris Florey', 'Anna Bunting', 'Barbara Nowlin', 'William J. Pierszalowski', 'Melissa Crouse', 'Mai Louise Downs', 'Aaron Kelley', 'Nick McLain', 'Bradley Walker', 'jorge montanez', 'Amanda Hallquist', 'Jane Harrison', 'OLIVER ROSENBERG', 'Yukari Kane', 'Elyse Masias', 'Penelope Lao', 'Julia Forsch', 'Amanda Pyle', 'Paul Hudson', 'Taylor Cashwell', 'Lindsey Lyons', 'Wendy Farina', 'Jonathan Hirsch', 'Valerie Chavez', 'Ann Lawson', 'Pam Laird', 'Rafael Moreno', 'Saana Baker', 'Rachel Strangeway', 'Jordan Paz ', 'Karen Schaupeter', 'Nate', 'theo moller', 'shannon may', 'Chloe Roth', 'Dmitriy Ivanov', 'dylan denicke', 'Sarah Gagnon', 'Celeste Cass', 'Jennifer Nellis', 'Jenny Pritchett', 'Cathy Rose', 'Kristen Stotts', 'Nathalie Roland and Damon Uyeda', 'George Pfau', 'james sterling pitt', 'Rachel Craft', 'Annie Cotten', 'Ninth Street Espresso c/o Nina Glikshtern', 'Scott Hewicker', 'cheryl dunn', 'Claire Cichy', 'SARAH FOSTER', 'benjamin minter', 'Sean Findley', 'johanna jackson', 'marit brook-kothlow', 'Alphonzo Solorzano', 'dan a carlson', 'Sean Hansen', 'Selena Aument', 'caroline cloak', 'SANDRETTO HEARING AID CENTER (Jeanne Johanson)', 'Erin Yattaw', 'Bettina Friedman', 'Hilary Ellenshaw', 'Tanya Zimbardo', 'Ray Mason', 'Ethan Nosowsky', 'Josh Lopez', 'Jill Hosman', 'Sarah Hromack', 'Madeleine Ignon', 'Melissa Graeber', 'Casey Ho', 'Katherine Riley', 'Janet Norris', 'Dana Hemenway', 'Mojdeh Mansoori', 'denise schatz', 'Richard T. Walker and Blaine Bookey', 'Brooke Westfall', 'David Lawrence', 'Luna Rienne', 'Jamie Vasta', 'tanya schleyer', 'Ryon Gesink', 'Camila Webb', 'Yuriko Hoshino', 'Juxtapoz Magazine', 'maysoun wazwaz', 'Rena Tom', 'EMILY CREWS', 'Kristin B Nienhuis', 'Patricia Maloney', 'John Groh', 'Claire Frost', 'Abner Nolan', 'Sophia Reiff', 'Sarah Peterson', 'Tana Sprague', 'Stacy Rodgers', 'Madeleine Cargas', 'John McMurtrie', 'Alex Styc', 'Jennifer Miko', 'Courtney Fink', 'Buck Bito', 'Andy Cabic', 'Marina Goncharova', 'Katie Morgan', 'Zoe Taleporos', 'paula morales', 'Abi Kelly ', 'isabel fondevila', 'Shawn Cheris', 'Bart Bruneel', 'Brandy Meyers', 'Ashley Schoenknecht', 'Charles McLeod ', 'Diana Ahrens', 'Giovanni Acosta', 'Tanya Hollis', 'Iain Stewart', 'James kim', 'Greg Lavine', 'Lydia Greer', 'Carolee Wheeler', 'Julia Goodman', 'Chloe Miller', 'aaron weis', 'Jed Holtzman', 'tammy fortin', 'Jennifer Bator', 'Aaron Stanton', 'Cody Frost', 'Kari Orvik', 'A. L. Spehr', 'Marijn Kruisselbrink', 'Jacilyn Albert', 'Phil Lollar', 'Raquel Picon', 'caitlyn galloway', 'Annie Dompe', 'Giorgio Spano e Alessandra Cattani', 'Mary Glassanos', 'erica lorraine scheidt', 'Caitlin Stuart', 'Elizabeth Bernstein', 'Scott Brown', 'Pedro Hernandez'];
@@ -98,7 +162,6 @@
 			var sideStr = Math.random() > .5 ? 
 							"left:" + side + "px;" : 
 							"right:" + side + "px;";
-			console.log(sideStr);
 			var top = (height / vert.length) * vert[step];
 			step = (step + 1) % vert.length; 
 
