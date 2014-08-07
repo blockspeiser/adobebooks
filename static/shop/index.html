@@ -1,0 +1,168 @@
+<html>
+<head>
+		<title>Adobe Books &amp; Arts Cooperative</title>
+		<link href='http://fonts.googleapis.com/css?family=Ovo' type='text/css'>
+		<style>
+			body {
+				background: #F1F0DC;
+				text-align: center;
+				font-family: Ovo, Georgia, serif;
+				width: 100%;
+				margin: 0;
+			}
+			#header {
+				position: fixed;
+				opacity: 0;
+			}
+			#headerLogo {
+				width: 80px;
+				height: 80px;
+				cursor: pointer;
+			}
+
+			#roy {
+				width: 900px;
+				max-width: 100%;
+				margin: 10px auto 30px;
+				top: 0;
+				left: 0%;
+				z-index: -1;
+			}
+
+			#top {
+				width: 900px;
+				max-width: 100%;
+				padding: 5px 0;
+				margin: 0 auto;
+				text-align: left;
+				background: #F1F0DC;
+
+			}
+			#top * {
+				vertical-align: middle;
+			}
+			#logoInfo {
+				float: left;
+			}
+			#logo {
+				width: 160px;
+				height: 160px;
+			}
+			#info {
+				background: #F1F0DC;
+				display: inline-block;
+				margin-right: 24px;
+				font-size: 14px;
+			}
+			#info #title {
+				text-transform: uppercase;
+			}
+			#about {
+				background: #F1F0DC;
+			}
+			#info a {
+				color: black;
+			}
+			#about h3 {
+				text-align: left;
+				color: #00CACA;
+				font-style: italic;
+				font-size: 32px;
+				margin: 0;
+			}
+			#top p {
+				text-align: left;
+			}
+
+			.clear {
+				clear: both;
+			}
+
+		</style>
+</head>
+
+<body>
+
+	<div id="header">
+		<img id="headerLogo" src="/img/adobe-logo-large.png">
+	</div>
+
+	<div id="top">
+		<div id="logoInfo">
+	
+			<a href="/"><img id="logo" src="/img/adobe-logo-large.png" /></a>
+			
+			<div id="info">
+				<p id="title">
+					Adobe Books <br>
+					&amp; Arts Cooperative
+				</p>
+				<p>
+					3130 24th Street <br>
+					San Francisco CA 94110 <br>
+					<a href="mailto:hello@adobebookshop.com">hello@adobebookshop.com</a> <br>
+					415.864.3936
+
+				</p>
+			</div>
+		</div>
+
+		<div id="about">
+			<p>Adobe Books is not a bookshop. It is not an art gallery. It is not a living room. It is not a retail store. It is not a community center. It is not a place to meet new friends. It does not have comfy chairs. It does not have a community table. It does not have art and music events. It is not possibly one of the world’s best bookstores. It is not a co-operative run business.</p>
+			<p><i>Adobe Books - defying definitions since 1984.</i></p>
+		</div>
+
+	</div>
+
+	<h1>Adobe Books Online Shop</h1>	
+
+	<a href="https://mkt.com/adobe-books-and-arts-coop" 
+	class="sq-embed-menu" 
+	data-menu-item-images="large" 
+	data-menu-accent-color="83b3b3" 
+	data-menu-template="column" 
+	data-menu-item-descriptions="show"> 
+	Order Online 
+	</a> 
+	<script src="https://cdn.sq-api.com/market/embed.js" charset="utf-8"> </script>
+
+	<p>
+		<a href="/">Adobe Books</a>.
+	</p>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+
+		$(function() {
+			$("#mapLink").click(function(e){
+				e.preventDefault();
+				$("#map").show();
+				$('html, body').animate({scrollTop:$("#map").position().top}, 400);
+			});
+			$("#hoursLink").click(function(e){
+				e.preventDefault();
+				
+				$("#hoursLink").html("<a href='#'>Monday - Friday: 12-8<br><br>Saturday & Sunday: 11-8</a>");
+				return;
+				$("#hours").show();
+				$('html, body').animate({scrollTop:$("#hours").position().top}, 400);
+			});
+
+			/*
+			$("#headerLogo").click(function(){
+				$('html, body').animate({scrollTop:0}, 400);
+			});
+			$(window).on('scroll', function() {
+			    var header = $("#header");
+			    if ($(this).scrollTop() > 150) {
+			        if (!header.data('faded')) header.data('faded', 1).stop(true).fadeTo(400, 1);
+			    } else if (header.data('faded')) {
+			        header.data('faded', 0).stop(true).fadeTo(400, 0);
+			    }
+			});
+			s*/
+		});
+
+	</script>
+</body>
+</html>
