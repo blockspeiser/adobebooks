@@ -1,0 +1,313 @@
+<html>
+<head>
+    <title>Adobe Books Membership Drive 2015</title>
+    <style>
+        body {
+            font-family: Oswald;
+            text-align: center;
+        }
+        body.blue {
+            background-color: #52C9F4;
+        }
+        body.white {
+            background-color: white;
+        }
+        body.red {
+            background-color: #ED4F2F;
+        }
+        #logo {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 140px;
+            height: 140px;
+        }
+        #helpCircle {
+            margin: 100px auto 0;
+            background-color: white;
+            font-size: 54px;
+            text-transform: uppercase;
+            width: 500px;
+            height: 500px;
+            border-radius: 250px;
+            box-sizing: border-box;
+            padding-top: 170px;  
+            cursor: pointer;
+        }
+        #helpCircle #line1 {
+            color: #ED4F2F;
+        }
+        #helpCircle #line2 {
+            color: #656451;
+        }
+        #helpCircle:hover {
+            background-color: #FEF25C;
+        }
+        #helpCircle:hover #line1,
+        #helpCircle.small #line1{
+            color: #656451;
+        }
+        #helpCircle:hover #line2,
+        #helpCircle.small #line2 {
+            color: #ED4F2F;
+        }
+        #helpCircle.small {
+            background-color: #FEF25C;
+            margin: 90px auto 0;
+            font-size: 28px;
+            width: 260px;
+            height: 260px;
+            border-radius: 130px;
+            padding-top: 86px;
+        }
+        #step2 {
+            display: none;
+            background-color: white;
+            margin-top: 35px;
+        }
+        .red #step2 {
+            background-color: #ED4F2F;
+        }
+        #coopHeart {
+            display: inline-block;
+            width: 285px;
+            height: 254px;
+            margin-right: 10px;
+            vertical-align: middle;
+            background-color: #52C9F4;
+            color: #ED4F2F;
+            cursor: pointer;
+        }
+        #coopHeart img {
+            width: 100%;
+        }
+        #coopHeart .text {
+            font-size: 28px;
+            margin-top: -170px;
+            text-transform: uppercase;
+        }
+        #coopHeart:hover {
+            color: white;
+            background-color: #ED4F2F;
+        }
+        #coopHeart.top {
+            color: #ED4F2F;
+            background-color: #FEF25C;
+        }
+        #friendsHex {
+            display: inline-block;
+            width: 285px;
+            height: 236px;
+            vertical-align: middle;
+            background-color: #52C9F4;
+            color: #FEF25C;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        #friendsHex a {
+            text-decoration: none;
+            color: inherit;
+        }
+        #friendsHex img {
+            width: 285px;
+        }
+        #friendsHex .text {
+            font-size: 28px;
+            margin-top: -160px;
+            text-transform: uppercase;
+        }
+        #friendsHex:hover {
+            background-color: #46AB4E;
+        }
+        #step3 {
+            display: none;
+            margin-top: 35px;
+        }
+        #hoursHeart {
+            display: inline-block;
+            width: 285px;
+            height: 254px;
+            margin-right: 10px;
+            vertical-align: middle;
+            background-color: #FEF25C;
+            color: #ED4F2F;
+            cursor: pointer;
+        }
+        #hoursHeart img {
+            width: 100%;
+        }
+        #hoursHeart a {
+            text-decoration: none;
+            color: inherit;
+        }
+        #hoursHeart .text {
+            font-size: 28px;
+            margin-top: -190px;
+            text-transform: uppercase;
+        }
+        #hoursHeart:hover {
+            background-color: white;
+            color: #ED4F2F;
+        }
+        #cannotHex {
+            display: inline-block;
+            width: 285px;
+            height: 236px;
+            vertical-align: middle;
+            background-color: #ED4F2F;
+            color: white;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        #cannotHex a {
+            text-decoration: none;
+            color: inherit;
+        }
+        #cannotHex img {
+            width: 100%;
+        }
+        #cannotHex .text, #cannotHex .text2 {
+            font-size: 28px;
+            margin-top: -166px;
+            text-transform: uppercase;
+        }
+        #cannotHex .text2 {
+            display: none;
+        }
+        #cannotHex:hover {
+            background-color: #46AB4E;
+        }
+        #cannotHex:hover .text {
+            display: none;
+        }
+        #cannotHex:hover .text2 {
+            display: block;
+            color: white;
+        }
+
+    </style>
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Oswald:300,400,700']
+        }
+      });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
+
+<body class="blue">
+
+<img id="logo" src="/img/adobe-logo-large.png">
+
+<div id="helpCircle">
+    <div id="text">
+        <div id="line1">I want to help</div>
+        <div id="line2">Adobe Books</div>
+    </div>
+</div>
+
+
+<div id="step2">
+    <div id="coopHeart">
+        <img src="/img/heart-mask.png" />
+        <div class="text">
+            <div>I want to join</div>
+            <div>the Co-op</div>
+        </div>
+    </div>
+
+    <div id="friendsHex">
+        <a href="/friends-with-benefits">
+        <img src="/img/hex-mask.png" />
+        <div class="text">
+            <div>I want to be</div>
+            <div>a friend with</div>
+            <div>benefits</div>
+        </div>
+        </a>
+    </div>
+</div>
+
+<div id="step3">
+    <div id="hoursHeart">
+        <a href="/join-the-coop">
+        <img src="/img/heart-mask.png" />
+        <div class="text">
+            <div>I can give</div>
+            <div>4 hours</div>
+            <div>monthy</div>
+        </div>
+        </a>
+    </div>
+
+    <div id="cannotHex">
+        <a href="/friends-with-benefits">
+        <img src="/img/hex-mask.png" />
+        <div class="text">
+            <div>I cannot</div>
+            <div>give 4 hours</div>
+            <div>monthly</div>
+        </div>
+        <div class="text2">
+            <div>Be a</div>
+            <div>friend with</div>
+            <div>benefits!</div>
+        </div>
+        </a>
+    </div>
+</div>
+
+
+<script>
+    $(function() {
+        var interval = 600;
+        $("#helpCircle").click(function() {
+            if (!$(this).hasClass("small")) {
+                $(this).switchClass("", "small", interval);
+                $("body").switchClass("blue", "white", interval);
+                $("#step2").fadeIn(interval);
+            } else {
+                $(this).switchClass("small", "", interval);
+                $("body").switchClass("white", "blue", interval);
+                $("#step2").fadeOut(interval);
+            }
+        });
+        $("#coopHeart").click(function(){
+            if (!$(this).hasClass("top")) {
+                $(this).switchClass("", "top", interval);
+                $("#helpCircle").slideUp(interval);
+                $("body").switchClass("white", "red", interval);
+                $("#friendsHex").animate({"width": 0}, interval);
+                $("#step2").css({backgroundColor: "transparent"});
+                $("#step3").fadeIn(interval);
+                $("#logo").fadeOut(interval/2, function() {
+                    $(this).attr("src", "/img/adobe-logo-large-white.png")
+                        .fadeIn(interval/2);
+                });
+               
+            } else {
+                $(this).switchClass("top", "", interval);
+                $("#helpCircle").slideDown(interval);
+                $("body").switchClass("red", "white", interval);
+                $("#friendsHex").animate({"width": "285px"}, interval); 
+                $("#step3").fadeOut(interval, function() {
+                    $("#step2").css({backgroundColor: "white"});
+                });
+                $("#logo").fadeOut(interval/2, function() {
+                    $(this).attr("src", "/img/adobe-logo-large.png")
+                        .fadeIn(interval/2);
+                });                
+            }
+
+
+        });
+    })
+</script>
+
+</body>
+
+</html>
