@@ -1,1 +1,225 @@
-Friends with Benefits
+<html>
+<head>
+    <title>Friends with Benefits - Adobe Books</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Oswald;
+            font-weight: 300;
+            text-align: center;
+            text-transform: uppercase;
+            background: repeating-linear-gradient(
+              45deg,
+              #58B45F,
+              #58B45F 150px,
+              #46AB4E 150px,
+              #46AB4E 300px
+            );
+        }
+        #logo {
+            width: 120px;
+            height: 120px;
+            margin-top: 30px;
+        }
+        h1, h2 {
+            color: #FEF25C;
+            margin: 6px 0;
+        }
+        h1 {
+            display: inline-block;
+            font-size: 48px;
+            color: #46AB4E;
+            background-color: #FEF25C;
+            padding: 14px 40px;
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 36px;
+        }
+        .base {
+            display: inline-block;
+            vertical-align: top;
+            font-weight: normal;
+            width: 180px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .ball {
+            width: 180px;
+            height: 180px;
+            border-radius: 90px;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 19px ;
+            background-color: white;
+        }
+        .base:hover .ball {
+            background-color: #FEF25C;
+        }
+        .base:hover .top, .base:hover .bottom {
+            /*
+            opacity: 0;
+            */
+        }
+        .top {
+            color: #46AB4E;
+            margin-bottom: 40px;
+        }
+        .top sup {
+            font-size: 60%;
+        }
+        .middle {
+            color: #656451;
+            margin-bottom: 42px;
+        }
+        .bottom {
+            color: #59CAF3;
+            font-size: 14px;
+        }
+        .base .description {
+            margin-top: 20px;
+            color: white;
+            width: 104px;
+            font-size: 14px;
+            display: inline-block;
+        }
+        #actions {
+            background-color: #E4BC7C;
+            padding: 25px;
+            margin-top: 30px;
+        }
+        .action {
+            display: inline-block;
+            width: 80px;
+            margin: 10px;
+            font-size: 14px;
+            color: #656451;
+            cursor: pointer;
+            text-transform: none;
+        }
+        .action .fa {
+            width: 80px;
+            height: 80px;
+            background-color: #F59D32;
+            color: white;
+            text-decoration: none;
+            border-radius: 40px;
+            line-height: 80px;
+            font-size: 36px;
+        }
+        .actionText {
+            margin-top: 8px;
+        }
+        .facebook .actionText {
+            text-align: right;
+            margin-right: -16px;
+        }
+        .twitter .actionText {
+            text-align: left;
+            margin-left: -4px;
+        }
+        .coop .fa:hover {
+            background-color: #ED4F2F;
+        }
+        .home .fa:hover {
+            background-color: #59CAF3;
+        }
+        .contact .fa:hover {
+            background-color: #43A34B;
+        }
+        .facebook .fa:hover {
+            background-color: #3B5996;
+        }
+        .twitter .fa:hover {
+            background-color: #59CAF3;
+        }
+        #finePrint {
+            margin-top: 50px;
+        }
+
+    </style>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Oswald:300,400,700']
+        }
+      });
+    </script>
+</head>
+<body>
+    <img id="logo" src="/img/adobe-logo-large.png">
+    <h2>2015 Membership Drive</h2>
+    <h1>Friends with Benefits</h1>
+
+    <div id="bases">
+        <div class="base">
+            <div class="ball">
+                <div class="top">1<sup>st</sup> Base</div>
+                <div class="middle">Lending Library</div>
+                <div class="bottom">$5 Month</div>
+            </div>
+            <div class="description">Borrow any one used book at a time</div>
+        </div>
+
+        <div class="base">
+            <div class="ball">
+                <div class="top">2<sup>nd</sup> Base</div>
+                <div class="middle">Book-a-Month</div>
+                <div class="bottom">$10 Month</div>
+            </div>
+            <div class="description">Get one free used book a month</div>
+        </div>
+
+        <div class="base">
+            <div class="ball">
+                <div class="top">3<sup>rd</sup> Base</div>
+                <div class="middle">It's My Party</div>
+                <div class="bottom">$500</div>
+            </div>
+            <div class="description">Host your own private party at Adobe</div>
+        </div>
+
+        <div class="base">
+            <div class="ball">
+                <div class="top">Homerun</div>
+                <div class="middle">Work Bash</div>
+                <div class="bottom">$1000</div>
+            </div>
+            <div class="description">Host your organization's party at Adobe</div>
+        </div>
+    </div>
+
+    <div id="actions">
+        <div class="action coop">
+            <a href="/join-the-coop" class="fa fa-heart"></a>
+            <div class="actionText">Co-op info</div>
+        </div>
+        <div class="action home">
+            <a href="/membership-drive" class="fa fa-home"></a>
+            <div class="actionText">Begin again</div>
+        </div>
+        <div class="action contact" style="margin-right:140px;">
+            <a href="mailto:hello@adobebookshop.com?subject=I have a question for Adobe Books"  target="_blank" class="fa fa-envelope"></a>
+            <div class="actionText">Ask a question</div>
+        </div>
+        <div class="action facebook">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=www.adobebooks.com/friends-with-benefits" target="_blank" class="fa fa-facebook"></a>
+            <div class="actionText">Tell your</div>
+        </div>
+        <div class="action twitter">
+            <a href="https://twitter.com/home?status=Help%20Adobe%20Books,%20become%20a%20Friend%20with%20Benefits!%20www.adobebooks.com/friends-with-benefits"  target="_blank" class="fa fa-twitter"></a>
+            <div class="actionText">friends</div>
+        </div>
+    </div>
+
+    <div id="finePrint">
+        <h2>Fine Print</h2>
+    </div>
+</body>
+</html>
+
