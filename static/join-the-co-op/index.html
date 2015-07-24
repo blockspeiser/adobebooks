@@ -5,6 +5,7 @@
         body {
             font-family: Oswald;
             margin: 0;
+            padding-bottom: 50px;
             font-size: 18px;
         }
         p, li {
@@ -24,26 +25,37 @@
             max-width: 700px;
         }
         #heartBox {
-            margin: 40px 0 40px 0;
+            margin: 50px 0 30px;
+            height: 300px;
             text-align: center;
+            color: #ED4F2F;
         }
         #heart {
-            display: inline-block;
-            width: 285px;
-            height: 254px;
-            margin-right: 10px;
-            vertical-align: middle;
-            background-color: #FEF25C;
-            color: #ED4F2F;
-            cursor: pointer;
+            width: 300px;
+            height: 300px;
         }
-        #heart img {
-            width: 100%;
+        #heartPath {
+            fill: #FEF25C;
         }
-        #heart .text {
+        #heartBox .text {
             font-size: 28px;
-            margin-top: -160px;
+            margin-top: -185px;
             text-transform: uppercase;
+        }
+        .joinEmail {
+            color: #ED4F2F;
+            background-color: #FEF25C;
+            display: inline-block;
+            width: 300px;
+            padding: 20px 30px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .joinEmail:hover {
+            background-color: #ED4F2F;
+            color: #FEF25C;  
         }
         h2 {
             color: #ED4F2F;
@@ -51,6 +63,7 @@
             margin-top: 40px;
         }
         #actions {
+            display: none;
             background-color: #E4BC7C;
             padding: 25px;
             text-align: center;
@@ -115,19 +128,33 @@
     </script>
 </head>
 <body>
-    <img id="logo" src="/img/adobe-logo-large.png">
+    <a href="/"><img id="logo" src="/img/adobe-logo-large.png"></a>
 
     <div id="content">
         <div id="heartBox">
-            <div id="heart">
-                <img src="/img/heart-mask.png" />
-                <div class="text">
-                    <div>The Co-op</div>
-                </div>
+            <svg version="1.1" id="heart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" xml:space="preserve">
+            <path id="heartPath" d="M150.7,55.3c0,0,21.6-37.3,68.1-37.3c46.5,0,76.6,43.2,76.6,89.1c0,45.8-34.7,77.9-58.3,97.6
+                c-23.6,19.6-77.8,60.9-86.5,68.8c-9.2-9.2-58.3-46.5-76-60.3C57,199.4,4.6,162.7,4.6,103.7c0-58.9,50.4-86.5,78.6-86.5
+                C111.4,17.3,132.3,29.7,150.7,55.3"/>
+            </svg>
+            <div class="text">
+                <div>The Co-op</div>
             </div>
         </div>
 
-        <p>Adobe Books & Arts Cooperative is a Volunteer Worker Owned Cooperative. It’s like work club for people interested in working on projects that have a cultural impact. We cooperate to get things done, like running a small business and hosting art and events.</p>
+        <p>Adobe Books & Arts Cooperative is a Volunteer Worker Owned Cooperative. We're like work club for people interested in projects that have a cultural impact. We're always looking for volunteers who can work their way into becoming full fledged Co-op Members.</p>
+
+        <center>
+           <a class="joinEmail" href="mailto:volunteer@adobebookshop.com?subject=Hi! I'd like to learn more about getting involved with Adobe. Let me tell you a little about myself..." target="_blank">Contact our Volunteer Coodinator</a>
+        </center>
+
+        <h2>Volunteer Projects Include</h2>
+        <ul>
+            <li>Organizing books in the shop and working the desk.</li>
+            <li>Attending books buys with Andrew.</li>
+            <li>Producing events in the shop, like readings and performances.</li>
+            <li>And much more!</li>
+        </ul>
 
         <h2>Being a member offers</h2>
         <ol>
@@ -144,22 +171,11 @@
             <li>Pledging to continue contributing at least <b>4 hours of work per month</b> to Adobe.</li>
             <li>Getting <b>voted in</b> by the Board.</li>
         </ol>
-
-        <h2>Find a Buddy</h2>
-        <p>To get started, connect with a current co-op member who is involved in projects you're interested in working on. Come to a meeting (first Wednesday of the month, on our <a href="/#calendarBox">calendar</a>) to meet people, or connect over email. Your buddy can help you figure out what projects and tasks can take you to your first 50 hours.</p> 
-
-        <ul>
-            <li>Books & Merch - Christine, Jon, Andrew, Brett</li>
-            <li>Book Buys - Jon, Andrew, Christine</li>
-            <li>Carpentry - Aaron</li>
-            <li>Design - Kyle</li>
-            <li>Events - Katie</li>
-            <li>Finance - Brett</li>
-            <li>Governance - Jeff</li>
-            <li>Gallery - Christian, Kat</li>
-            <li>Shop (shelving, pricing, desk) - Christine, Jon</li>
-        </ul>
     </div>
+
+    <center>
+       <a class="joinEmail" href="mailto:volunteer@adobebookshop.com?subject=Hi! I'd like to learn more about getting involved with Adobe. Let me tell you a little about myself..." target="_blank">Contact our Volunteer Coodinator</a>
+    </center>
 
 <div id="actions">
     <div class="action coop">
