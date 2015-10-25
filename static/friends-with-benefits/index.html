@@ -56,9 +56,18 @@
             padding: 10px;
             font-size: 19px ;
             background-color: white;
+            position: relative;
         }
         .base:hover .ball {
             background-color: #FEF25C;
+        }
+        .ball .stich {
+            position: absolute;
+            left: 19px;
+            top: 25px;
+        }
+        .base:hover .ball .stich {
+            display: none;
         }
         .base:hover .top, .base:hover .bottom {
             /*
@@ -219,6 +228,7 @@
     <div id="bases">
         <div class="base">
             <div class="ball">
+                <img class="stich" src="/img/base-stich.png" />                
                 <div class="top">1<sup>st</sup> Base</div>
                 <div class="middle">Lending Library</div>
                 <div class="bottom">$50 Year</div>
@@ -228,6 +238,7 @@
 
         <div class="base">
             <div class="ball">
+                <img class="stich" src="/img/base-stich.png" />
                 <div class="top">2<sup>nd</sup> Base</div>
                 <div class="middle">Book-a-Month</div>
                 <div class="bottom">$100 Year</div>
@@ -237,6 +248,7 @@
 
         <div class="base">
             <div class="ball">
+                <img class="stich" src="/img/base-stich.png" />
                 <div class="top">3<sup>rd</sup> Base</div>
                 <div class="middle">It's My Party</div>
                 <div class="bottom">$500</div>
@@ -246,6 +258,7 @@
 
         <div class="base">
             <div class="ball">
+                <img class="stich" src="/img/base-stich.png" />
                 <div class="top">Homerun</div>
                 <div class="middle">Work Bash</div>
                 <div class="bottom">$1000</div>
