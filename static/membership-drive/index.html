@@ -19,8 +19,10 @@
             position: fixed;
             top: 20px;
             left: 20px;
+        }
+        #logo img {
             width: 140px;
-            height: 140px;
+            height: 140px;    
         }
         #helpCircle {
             margin: 100px auto 0;
@@ -53,7 +55,7 @@
         }
         #helpCircle.small {
             background-color: #FEF25C;
-            margin: 90px auto 0;
+            margin: 70px auto 0;
             font-size: 28px;
             width: 260px;
             height: 260px;
@@ -62,44 +64,47 @@
         }
         #step2 {
             display: none;
-            background-color: white;
             margin-top: 35px;
         }
-        .red #step2 {
-            background-color: #ED4F2F;
+        .heart {
+            width: 300px;
+            height: 300px;
         }
         #coopHeart {
             display: inline-block;
-            width: 285px;
-            height: 254px;
-            margin-right: 10px;
-            vertical-align: middle;
-            background-color: #52C9F4;
+            height: 300px;
+            width: 300px;
+            margin: 0 20px;
+            vertical-align: top;
             color: #ED4F2F;
             cursor: pointer;
         }
-        #coopHeart img {
-            width: 100%;
-        }
         #coopHeart .text {
             font-size: 28px;
-            margin-top: -170px;
+            margin-top: -200px;
             text-transform: uppercase;
         }
-        #coopHeart:hover {
+        #coopHeart .heartPath {
+            fill: #52C9F4;
+        }
+        #coopHeart:hover  {
             color: white;
-            background-color: #ED4F2F;
+        }
+        #coopHeart:hover .heartPath {
+            fill: #ED4F2F;
         }
         #coopHeart.top {
             color: #ED4F2F;
-            background-color: #FEF25C;
+        }
+        #coopHeart.top .heartPath {
+            fill: #FEF25C;
         }
         #friendsHex {
             display: inline-block;
-            width: 285px;
-            height: 236px;
-            vertical-align: middle;
-            background-color: #52C9F4;
+            vertical-align: top;
+            margin: 0 20px;
+            height: 300px;
+            width: 300px;
             color: #FEF25C;
             overflow: hidden;
             cursor: pointer;
@@ -108,16 +113,20 @@
             text-decoration: none;
             color: inherit;
         }
-        #friendsHex img {
-            width: 285px;
+        .hexagon {
+            width: 300px;
+            height: 300px;
+        }
+        #friendsHex .hexagonPath {
+            fill: #52C9F4;
         }
         #friendsHex .text {
             font-size: 28px;
-            margin-top: -160px;
+            margin-top: -190px;
             text-transform: uppercase;
         }
-        #friendsHex:hover {
-            background-color: #46AB4E;
+        #friendsHex:hover .hexagonPath{
+            fill: #46AB4E;
         }
         #step3 {
             display: none;
@@ -125,16 +134,15 @@
         }
         #hoursHeart {
             display: inline-block;
-            width: 285px;
-            height: 254px;
-            margin-right: 10px;
-            vertical-align: middle;
-            background-color: #FEF25C;
+            width: 300px;
+            height: 300px;
+            margin: 0 20px;
+            vertical-align: top;
             color: #ED4F2F;
             cursor: pointer;
         }
-        #hoursHeart img {
-            width: 100%;
+        #hoursHeart .heartPath {
+            fill: #FEF25C;
         }
         #hoursHeart a {
             text-decoration: none;
@@ -142,40 +150,46 @@
         }
         #hoursHeart .text {
             font-size: 28px;
-            margin-top: -190px;
+            margin-top: -216px;
             text-transform: uppercase;
         }
         #hoursHeart:hover {
-            background-color: white;
             color: #ED4F2F;
+        }
+        #hoursHeart:hover .heartPath {
+            fill: white;
         }
         #cannotHex {
             display: inline-block;
-            width: 285px;
-            height: 236px;
-            vertical-align: middle;
-            background-color: #ED4F2F;
+            width: 300px;
+            height: 300px;
+            margin: 0 20px;
+            vertical-align: top;
             color: white;
             overflow: hidden;
             cursor: pointer;
+        }
+        #cannotHex .hexagonPath {
+            fill: #ED4F2F;
+            border: 1px solid white;
+            stroke: white;
+            stroke-width: 3px;
         }
         #cannotHex a {
             text-decoration: none;
             color: inherit;
         }
-        #cannotHex img {
-            width: 100%;
-        }
         #cannotHex .text, #cannotHex .text2 {
             font-size: 28px;
-            margin-top: -166px;
+            margin-top: -194px;
             text-transform: uppercase;
         }
         #cannotHex .text2 {
             display: none;
         }
-        #cannotHex:hover {
-            background-color: #46AB4E;
+        #cannotHex:hover .hexagonPath{
+            fill: #46AB4E;
+            stroke: #46AB4E;
         }
         #cannotHex:hover .text {
             display: none;
@@ -184,7 +198,36 @@
             display: block;
             color: white;
         }
-
+        .line {
+            z-index: -1;
+        }
+        @media only screen and (max-width: 650px) {
+            #logo {
+                top: auto;
+                left: auto;
+                bottom: 5px;
+                right: 5px;
+            }
+            #logo img {
+                width: 70px;
+                height: 70px;
+            }
+            #helpCircle {
+                width: 300px;
+                height: 300px;
+                border-radius: 150px;
+                font-size: 32px;
+                padding-top: 100px;
+            }
+            #helpCircle.small {
+                margin-top: 20px;
+                width: 120px;
+                height: 120px;
+                border-radius: 60px;
+                font-size: 14px;
+                padding-top: 40px;
+            }
+        }
     </style>
 
     <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js"></script>
@@ -201,7 +244,7 @@
 
 <body class="blue">
 
-<img id="logo" src="/img/adobe-logo-large.png">
+<a id="logo" href="/"><img src="/img/adobe-logo-large.png"></a>
 
 <div id="helpCircle">
     <div id="text">
@@ -213,7 +256,11 @@
 
 <div id="step2">
     <div id="coopHeart">
-        <img src="/img/heart-mask.png" />
+        <svg version="1.1" class="heart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" xml:space="preserve">
+        <path class="heartPath" d="M150.7,55.3c0,0,21.6-37.3,68.1-37.3c46.5,0,76.6,43.2,76.6,89.1c0,45.8-34.7,77.9-58.3,97.6
+            c-23.6,19.6-77.8,60.9-86.5,68.8c-9.2-9.2-58.3-46.5-76-60.3C57,199.4,4.6,162.7,4.6,103.7c0-58.9,50.4-86.5,78.6-86.5
+            C111.4,17.3,132.3,29.7,150.7,55.3"/>
+        </svg>
         <div class="text">
             <div>I want to join</div>
             <div>the Co-op</div>
@@ -222,7 +269,9 @@
 
     <div id="friendsHex">
         <a href="/friends-with-benefits">
-        <img src="/img/hex-mask.png" />
+        <svg version="1.1" class="hexagon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" xml:space="preserve">
+        <polygon class="hexagonPath" points="148.5,33.1 7.9,116.8 62.1,267.8 238.3,267.8 291.5,116.8 "/>
+        </svg>
         <div class="text">
             <div>I want to be</div>
             <div>a friend with</div>
@@ -235,19 +284,30 @@
 <div id="step3">
     <div id="hoursHeart">
         <a href="/join-the-co-op">
-        <img src="/img/heart-mask.png" />
-        <div class="text">
-            <div>I can give</div>
-            <div>4 hours</div>
-            <div>monthy</div>
-        </div>
+            <svg version="1.1" class="heart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+            <path class="heartPath" d="M150.7,55.3c0,0,21.6-37.3,68.1-37.3c46.5,0,76.6,43.2,76.6,89.1c0,45.8-34.7,77.9-58.3,97.6
+                c-23.6,19.6-77.8,60.9-86.5,68.8c-9.2-9.2-58.3-46.5-76-60.3C57,199.4,4.6,162.7,4.6,103.7c0-58.9,50.4-86.5,78.6-86.5
+                C111.4,17.3,132.3,29.7,150.7,55.3"/>
+            <path class="heartPath" d="M-794.9,154.3c33.9,0,59.2,15,81.3,45.8"/>
+            <path class="heartPath" d="M-713.6,200.1c0,0,26-45,82.1-45"/>
+            <polygon class="heartPath" points="270.5,222.3 241.4,222.3 255.5,192.1 "/>
+            <path class="heartPath" d="M256,242.9c8.5,0,15.4-6.9,15.4-15.4c0-8.5-6.9-15.4-15.4-15.4c-8.5,0-15.4,6.9-15.4,15.4
+                C240.6,236,247.5,242.9,256,242.9"/>
+            </svg>
+            <div class="text">
+                <div>I can give</div>
+                <div>4 hours</div>
+                <div>monthly</div>
+            </div>
         </a>
     </div>
 
     <div id="cannotHex">
         <a href="/friends-with-benefits">
-        <img src="/img/hex-mask.png" />
-        <div class="text">
+        <svg version="1.1" class="hexagon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" xml:space="preserve">
+        <polygon class="hexagonPath" points="148.5,33.1 7.9,116.8 62.1,267.8 238.3,267.8 291.5,116.8 "/>
+        </svg>        <div class="text">
             <div>I cannot</div>
             <div>give 4 hours</div>
             <div>monthly</div>
@@ -269,11 +329,15 @@
             if (!$(this).hasClass("small")) {
                 $(this).switchClass("", "small", interval);
                 $("body").switchClass("blue", "white", interval);
-                $("#step2").fadeIn(interval);
+                $("#step2").fadeIn(interval, function(){
+                    connect($("#coopHeart")[0], $("#helpCircle")[0], "#52C9F4", 3);
+                    connect($("#friendsHex")[0], $("#helpCircle")[0], "#46AB4E", 3);
+                });
             } else {
                 $(this).switchClass("small", "", interval);
                 $("body").switchClass("white", "blue", interval);
                 $("#step2").fadeOut(interval);
+                $(".line").fadeOut(300, function() {$(".line").remove();});
             }
         });
         $("#coopHeart").click(function(){
@@ -281,10 +345,14 @@
                 $(this).switchClass("", "top", interval);
                 $("#helpCircle").slideUp(interval);
                 $("body").switchClass("white", "red", interval);
-                $("#friendsHex").animate({"width": 0}, interval);
-                $("#step2").css({backgroundColor: "transparent"});
-                $("#step3").fadeIn(interval);
-                $("#logo").fadeOut(interval/2, function() {
+                $("#coopHeart .heartPath").css({fill: "#FEF25C"});
+                $("#friendsHex").animate({width: "0px", height: "0px"}, interval); 
+                $("#step3").fadeIn(interval, function() {
+                    connect($("#hoursHeart")[0], $("#coopHeart")[0], "#FEF25C", 3);
+                    connect($("#cannotHex")[0], $("#coopHeart")[0], "#46AB4E", 3); 
+                });
+                $(".line").fadeOut(300, function() {$(".line").remove();});
+                $("#logo img").fadeOut(interval/2, function() {
                     $(this).attr("src", "/img/adobe-logo-large-white.png")
                         .fadeIn(interval/2);
                 });
@@ -293,19 +361,52 @@
                 $(this).switchClass("top", "", interval);
                 $("#helpCircle").slideDown(interval);
                 $("body").switchClass("red", "white", interval);
-                $("#friendsHex").animate({"width": "285px"}, interval); 
+                $("#coopHeart .heartPath").css({fill: "#52C9F4"});
+                $("#friendsHex").animate({width: "300px", height: "300px"}, interval); 
                 $("#step3").fadeOut(interval, function() {
-                    $("#step2").css({backgroundColor: "white"});
+                    connect($("#coopHeart")[0], $("#helpCircle")[0], "#52C9F4", 3);
+                    connect($("#friendsHex")[0], $("#helpCircle")[0], "#46AB4E", 3);                    
                 });
-                $("#logo").fadeOut(interval/2, function() {
+                $(".line").fadeOut(300, function() {$(".line").remove();});
+                $("#logo img").fadeOut(interval/2, function() {
                     $(this).attr("src", "/img/adobe-logo-large.png")
                         .fadeIn(interval/2);
                 });                
             }
 
-
         });
-    })
+    });
+    function getOffset( el ) {
+        var rect = el.getBoundingClientRect();
+        return {
+            left: rect.left + window.pageXOffset,
+            top: rect.top + window.pageYOffset,
+            width: rect.width || el.offsetWidth,
+            height: rect.height || el.offsetHeight
+        };
+    }
+
+    function connect(div1, div2, color, thickness) { // draw a line connecting elements
+        var off1 = getOffset(div1);
+        var off2 = getOffset(div2);
+        // bottom right
+        var x1 = off1.left + off1.width/2;
+        var y1 = off1.top + off1.height/2;
+        // top right
+        var x2 = off2.left + off2.width/2;
+        var y2 = off2.top + off2.height/2;
+        // distance
+        var length = Math.sqrt(((x2-x1) * (x2-x1)) + ((y2-y1) * (y2-y1)));
+        // center
+        var cx = ((x1 + x2) / 2) - (length / 2);
+        var cy = ((y1 + y2) / 2) - (thickness / 2);
+        // angle
+        var angle = Math.atan2((y1-y2),(x1-x2))*(180/Math.PI);
+        // make hr
+        var htmlLine = "<div class='line' style='display:none;padding:0px; margin:0px; height:" + thickness + "px; background-color:" + color + "; line-height:1px; position:absolute; left:" + cx + "px; top:" + cy + "px; width:" + length + "px; -moz-transform:rotate(" + angle + "deg); -webkit-transform:rotate(" + angle + "deg); -o-transform:rotate(" + angle + "deg); -ms-transform:rotate(" + angle + "deg); transform:rotate(" + angle + "deg);' />";
+
+        $(htmlLine).appendTo("body").fadeIn(400);
+    }
 </script>
 
 </body>

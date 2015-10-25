@@ -5,7 +5,6 @@
         body {
             font-family: Oswald;
             margin: 0;
-            padding-bottom: 50px;
             font-size: 18px;
         }
         p, li {
@@ -16,8 +15,10 @@
             position: absolute;
             top: 20px;
             left: 20px;
+        }
+        #logo img {
             width: 140px;
-            height: 140px;
+            height: 140px;    
         }
         #content {
             width: 92%;
@@ -39,14 +40,16 @@
         }
         #heartBox .text {
             font-size: 28px;
-            margin-top: -185px;
+            margin-top: -205px;
             text-transform: uppercase;
         }
         .joinEmail {
             color: #ED4F2F;
             background-color: #FEF25C;
             display: inline-block;
-            width: 300px;
+            width: 350px;
+            max-width: 100%;
+            box-sizing: border-box;
             padding: 20px 30px;
             border-radius: 10px;
             text-transform: uppercase;
@@ -63,11 +66,10 @@
             margin-top: 40px;
         }
         #actions {
-            display: none;
             background-color: #E4BC7C;
             padding: 25px;
             text-align: center;
-            margin-top: 30px;
+            margin-top: 120px;
         }
         .action {
             display: inline-block;
@@ -93,6 +95,9 @@
         .actionText {
             margin-top: 8px;
         }
+        .action.contact {
+            margin-right: 160px;
+        }
         .facebook .actionText {
             text-align: right;
             margin-right: -16px;
@@ -116,6 +121,22 @@
         .twitter .fa:hover {
             background-color: #59CAF3;
         }
+        @media only screen and (max-width: 650px) {
+            #logo {
+                position: fixed;
+                top: auto;
+                left: auto;
+                bottom: 5px;
+                right: 5px;
+            }
+            #logo img {
+                width: 70px;
+                height: 70px;
+            }
+            .action.contact {
+                margin-right: 10px;
+            }
+        }
     </style>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
     <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js"></script>
@@ -128,7 +149,7 @@
     </script>
 </head>
 <body>
-    <a href="/"><img id="logo" src="/img/adobe-logo-large.png"></a>
+    <a id="logo" href="/"><img src="/img/adobe-logo-large.png"></a>
 
     <div id="content">
         <div id="heartBox">
@@ -138,7 +159,7 @@
                 C111.4,17.3,132.3,29.7,150.7,55.3"/>
             </svg>
             <div class="text">
-                <div>The Co-op</div>
+                <div>Join<br>The Co-op</div>
             </div>
         </div>
 
@@ -171,11 +192,13 @@
             <li>Pledging to continue contributing at least <b>4 hours of work per month</b> to Adobe.</li>
             <li>Getting <b>voted in</b> by the Board.</li>
         </ol>
+    
+        <center>
+           <a class="joinEmail" href="mailto:volunteer@adobebookshop.com?subject=Hi! I'd like to learn more about getting involved with Adobe. Let me tell you a little about myself..." target="_blank">Contact our Volunteer Coodinator</a>
+        </center>
+
     </div>
 
-    <center>
-       <a class="joinEmail" href="mailto:volunteer@adobebookshop.com?subject=Hi! I'd like to learn more about getting involved with Adobe. Let me tell you a little about myself..." target="_blank">Contact our Volunteer Coodinator</a>
-    </center>
 
 <div id="actions">
     <div class="action coop">
@@ -186,7 +209,7 @@
         <a href="/membership-drive" class="fa fa-home"></a>
         <div class="actionText">Begin again</div>
     </div>
-    <div class="action contact" style="margin-right:140px;">
+    <div class="action contact">
         <a href="mailto:hello@adobebookshop.com?subject=I have a question for Adobe Books"  target="_blank" class="fa fa-envelope"></a>
         <div class="actionText">Ask a question</div>
     </div>
