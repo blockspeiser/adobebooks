@@ -181,10 +181,16 @@
             height: 340px;
             margin-top: -140px;
             width: 100%;
+            text-align: center;
         }
         #bannerG {
             width: 100%;
             max-width: 1000px;
+        }
+        #bannerImg {
+            display: none;
+            margin: 0 auto;
+            width: 92%;
         }
         .st4{fill:#FEF25C;}
         .st1{fill:transparent;}
@@ -195,6 +201,18 @@
             }
             .action.contact {
                 margin-right: 10px;
+            }
+            #banner {
+                display: none;
+            }
+            #bannerImg {
+                display: block;
+            }
+            #bannerBox h1 {
+               display: none;
+            }
+            h2 {
+                font-size: 22px;
             }
         }
     </style>
@@ -232,6 +250,7 @@
                 <path class="st3" d="M500.7,279"/>
             </g>
         </svg>
+        <img id="bannerImg" src="/img/banner.png" />
         <h1>Friends with Benefits</h1>
     </div>
 
@@ -330,6 +349,7 @@
             <li>Bases are cumulative, 2nd Base includes borrowing rights etc.</li>
             <li><b>1st Base</b>: Used books only priced up to $50.</li>
             <li><b>2st Base</b>: One used book up to $16, once per calendar month, for pickup in store.</li>
+            <li>Feel free to buy friendship for one of your friends!</li>
     </div>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

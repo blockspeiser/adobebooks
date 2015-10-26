@@ -25,6 +25,12 @@
             width: 140px;
             height: 140px;    
         }
+        #homeLink { 
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            color: #FEF25C;
+        }
         #helpCircle {
             margin: 100px auto 0;
             background-color: white;
@@ -254,6 +260,8 @@
     </div>
 </div>
 
+<a id="homeLink" href="/">Take me Home</a>
+
 
 <div id="step2">
     <div id="coopHeart">
@@ -330,6 +338,7 @@
             if (!$(this).hasClass("small")) {
                 $(this).switchClass("", "small", interval);
                 $("body").switchClass("blue", "white", interval);
+                $("#homeLink").fadeOut(interval);
                 $("#step2").fadeIn(interval, function(){
                     connect($("#coopHeart")[0], $("#helpCircle")[0], "#52C9F4", 3);
                     connect($("#friendsHex")[0], $("#helpCircle")[0], "#46AB4E", 3);
@@ -337,6 +346,7 @@
             } else {
                 $(this).switchClass("small", "", interval);
                 $("body").switchClass("white", "blue", interval);
+                $("#homeLink").fadeIn(interval);
                 $("#step2").fadeOut(interval);
                 $(".line").fadeOut(300, function() {$(".line").remove();});
             }
