@@ -1,13 +1,14 @@
 <html>
 <head>
-		<title>Adobe Books & Arts Cooperative</title>
+		<title>Adobe Books &amp; Arts Cooperative</title>
 		<link href='http://fonts.googleapis.com/css?family=Ovo' type='text/css'>
 		<style>
 			body {
-				background: white;
+				background: #F1F0DC;
 				text-align: center;
 				font-family: Ovo, Georgia, serif;
 				width: 100%;
+				margin: 0;
 			}
 			#header {
 				position: fixed;
@@ -18,54 +19,86 @@
 				height: 80px;
 				cursor: pointer;
 			}
-			#content {
+
+			#roy {
 				width: 900px;
-				max-width: 95%;
-				margin: 0 auto;
+				max-width: 100%;
+				margin: 10px auto 30px;
+				top: 0;
+				left: 0%;
+				z-index: -1;
 			}
+
 			#top {
-				padding: 20px;
+				width: 900px;
+				max-width: 100%;
+				padding: 5px 0;
+				margin: 0 auto;
+				text-align: left;
+				background: #F1F0DC;
+
 			}
 			#top * {
 				vertical-align: middle;
+			}
+			#logoInfo {
+				float: left;
 			}
 			#logo {
 				width: 160px;
 				height: 160px;
 			}
 			#info {
+				background: #F1F0DC;
 				display: inline-block;
 				margin-right: 24px;
 				font-size: 14px;
+			}
+			#info #title {
 				text-transform: uppercase;
 			}
 			#about {
-				display: inline-block;
-				width: 470px;
-				max-width: 95%;
+				background: #F1F0DC;
+			}
+			#info a {
+				color: black;
 			}
 			#about h3 {
 				text-align: left;
 				color: #00CACA;
+				font-style: italic;
+				font-size: 32px;
+				margin: 0;
 			}
 			#top p {
 				text-align: left;
 			}
+
+			#left {
+				width: 740px;
+				max-width: 95%;
+				margin: 0 auto;
+				display: block;
+
+			}
+
 			#grid {
 				display: inline-block;
 				margin-bottom: 30px;
 			}
 			.gridBox {
+				background: #F1F0DC;
 				display: inline-block;
 				margin: -1px 0 0 1px;
 			}
 			.gridItem {
 				display: table;
 				font-size: 25px;
-				width: 220px;
-				height: 220px;
+				font-family: Helvetica, sans-serif;
+				width: 240px;
+				height: 240px;
 				text-transform: uppercase;
-				border: 1px solid black;
+				border: 1px solid #777;
 			}
 			.gridBox:hover {
 				background-color: #D02229;
@@ -89,9 +122,30 @@
 			.gridBox:nth-child(even) a {
 				color: #777;
 			}
-			#map, #calendar {
+
+			#calendarBox {
+				margin-left: 10px;
+				margin-bottom: 40px;
+			}
+
+			#eventsHeader {
+				color: #00CACA;
+				font-style: italic;
+				font-weight: bold;
+				margin-bottom: 20px;
+				font-size: 20px;
+				text-align: left;
+			}
+
+			#map {
+				display: none;
 				margin: 40px;
 			}
+			#hours {
+				display: none;
+				margin-bottom: 200px;
+			}
+
 			.clear {
 				clear: both;
 			}
@@ -100,117 +154,160 @@
 </head>
 
 <body>
+
 	<div id="header">
 		<img id="headerLogo" src="/img/adobe-logo-large.png">
 	</div>
 
-	<div id="content">
+	<div id="top">
+		<div id="logoInfo">
+		<img id="logo" src="/img/adobe-logo-large.png" />
+		
+		<div id="info">
+			<p id="title">
+				Adobe Books <br>
+				&amp; Arts Cooperative
+			</p>
+			<p>
+				3130 24th Street <br>
+				San Francisco CA 94110 <br>
+				<a href="mailto:hello@adobebookshop.com">hello@adobebookshop.com</a> <br>
+				415.864.3936
 
-		<div id="top">
-			<img id="logo" src="/img/adobe-logo-large.png" />
-			
-			<div id="info">
-				<p>
-					Adobe Books <br>
-					&amp; Arts Cooperative
-				</p>
-				<p>
-					3130 24th Street <br>
-					San Francisco CA 94110 <br>
-					415.864.8855
-				</p>
-			</div>
-			
-			<div id="about">
-				<h3>Welcome</h3>
-				<p>Adobe Books is not a bookshop. It is not an art gallery. It is not a living room. It is not a retail store. It is not a community center. It is not a place to meet new friends. It does not have comfy chairs. It does not have a community table. It does not have art and music events. It is not possibly one of the world’s best bookstores. It is not a co-operative run business.</p>
-				<p>Adobe Books - defying defintions since 1984.</p>
-			</div>
-
+			</p>
 		</div>
+		</div>
+
+		<div id="about">
+			<p>Adobe Books is not a bookshop. It is not an art gallery. It is not a living room. It is not a retail store. It is not a community center. It is not a place to meet new friends. It does not have comfy chairs. It does not have a community table. It does not have art and music events. It is not possibly one of the world's best bookstores. It is not a co-operative run business.</p>
+			<p><i>Adobe Books - defying definitions since 1989.</i></p>
+		</div>
+
+	</div>
+
+	<img id="roy" src="/img/RoyH_AdobeBooks_cropped.jpeg"/>
+
+	<div id="left">
+
+
 
 		<span id="grid"><!--
 
-			-->
-			<div class="gridBox">
-			<div id="eventsLink" class="gridItem">
-				<a href="#">Event Calendar</a>
-			</div>
-			</div><!--
-
 			--><div class="gridBox">
 			<div class="gridItem">
-				<a href="http://www.adobebackroomgallery.com">Backroom Gallery</a>
+				<a href="http://www.adobebackroomgallery.com" target="_blank">Backroom Gallery</a>
 			</div></a>
 			</div><!--
 
 			--><div class="gridBox">
 			<div class="gridItem">
-				<a href="http://shop.adobebooks.com">Shop Online</a>
+				<a href="/shop">Online<br>Shop</a>
 			</div>
 			</div><!--
 
 			--><div class="gridBox">
 			<div class="gridItem">
-				<a href="https://www.facebook.com/pages/Adobe-Books/111859948834325">Facebook</a>
+				<a href="https://www.facebook.com/pages/Adobe-Books/111859948834325" target="_blank">Facebook</a>
 			</div>
 			</div><!--
 
 			--><div class="gridBox">
 			<div class="gridItem">
-				<a href="https://www.instagram.com/adobebookshop">Instagram</a>
+				<a href="https://www.instagram.com/adobebookshop" target="_blank">Instagram</a>
 			</div>
 			</div><!--
 
 			--><div class="gridBox">
 			<div class="gridItem">
-				<a href="/thankyou">Indiegogo Thank You</a>
+				<a href="/join-the-co-op">Join the<br>Co-op</a>
 			</div>
 			</div><!--
 
 			--><div class="gridBox">
 			<div class="gridItem">
-				<a href="mailto:hello@adobebookshop.com">Volunteer</a>
+				<a href="http://www.andrewmckinley.com" target="_blank">Friends of Adobe</a>
 			</div>
 			</div><!--
 
 			--><div class="gridBox">
 			<div class="gridItem">
-				<a href="http://www.andrewmckinley.com">Friends of Adobe</a>
+				<a href="/thankyou">Thank You<br>2013</a>
 			</div>
 			</div><!--
 
+			--><div class="gridBox">
+			<div id="mapLink" class="gridItem">
+				<a href="#">Map</a>
+			</div>
+			</div><!--
+
+			--><div class="gridBox">
+			<div id="hoursLink" class="gridItem">
+				<a href="#">Hours</a>
+			</div>
+			</div><!--
 
 			--><div class="clear"></div><!--
 
 		--></span>
 
-		<div id="calendar">
-			<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=MONTH&amp;height=600&amp;wkst=2&amp;src=i7fu7cvjmvlplpt2smdnebgnf4%40group.calendar.google.com&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="600" height="600" frameborder="0" scrolling="no"></iframe>
-		</div>
 
 		<div id="map">
 			<iframe width="600" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=3130%2B24th%2BStreet(Adobe+Books+%26+Arts+Cooperative)&ie=UTF8&z=15&t=m&iwloc=near&output=embed"></iframe>
-			
 		</div>
 
+		<div id="hours">
+			<h2>Adobe Books is open</h2>
+			Monday-Friday: 12-8 <br>
+			Saturday-Sunday: 11-8
+		</div>
+
+		<div id="calendarBox">
+			<h2 id="calendarHeader">Upcoming Events</h2>
+			<div id="calendar">
+				<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=600&amp;wkst=2&amp;src=i7fu7cvjmvlplpt2smdnebgnf4%40group.calendar.google.com&amp;ctz=America%2FLos_Angeles&amp;bgcolor=%23F1F0DC" style=" border-width:0 " width="100%" height="300px" frameborder="0" scrolling="no"></iframe>
+			</div>
+		</div>
+
+		<center>
+		<form method="post" action="http://oi.vresp.com?fid=f17f03629b" target="vr_optin_popup" onsubmit="window.open( 'http://www.verticalresponse.com', 'vr_optin_popup', 'scrollbars=yes,width=600,height=450' ); return true;" >
+
+		  <div style="font-family: verdana; font-size: 11px; width: 160px; padding: 10px; border: 1px solid #000000; background: #00caca">
+		    <strong><span style="color: #ffffff;">Subscribe to our Newsletter!</span></strong><br/><br/>
+		    <label style="color: #ffffff;">Email Address:</label><br/>
+		    <input name="email_address" size="15" style="margin-top: 5px; border: 1px solid #999; padding: 3px;"/><br/>
+		    <input type="submit" value="Subscribe" style="margin-top: 5px; border: 1px solid #999; padding: 3px;"/><br/>
+		    <br/><span style="color: #ffffff;">Email & Social Media Marketing by <a title="Email & Social Media Marketing by VerticalResponse" href="http://www.verticalresponse.com" rel="nofollow">VerticalResponse</a></span>
+		  </div>
+		</form>
+		</center>
 
 	</div>
+
+	<br>
+	<p>
+		Adobe drawing courtesy of <a href="http://www.royhuerta.com/" target="_blank">Roy Huerta</a>.
+	</p>
+
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script>
 
 		$(function() {
-			$("#eventsLink").click(function(){
-				$('html, body').animate({scrollTop:$("#calendar").position().top}, 400);
-			});
-			$("#mapLink").click(function(){
+			$("#mapLink").click(function(e){
+				e.preventDefault();
+				$("#map").show();
 				$('html, body').animate({scrollTop:$("#map").position().top}, 400);
 			});
-			$(".gridItem.soon").click(function(e){
+			$("#hoursLink").click(function(e){
 				e.preventDefault();
-				$(this).html("<a href=''>Coming<br>Soon</a>");
-
+				
+				$("#hoursLink").html("<a href='#'>Monday - Friday: 12-8<br><br>Saturday & Sunday: 11-8</a>");
+				return;
+				$("#hours").show();
+				$('html, body').animate({scrollTop:$("#hours").position().top}, 400);
 			});
+
+			/*
 			$("#headerLogo").click(function(){
 				$('html, body').animate({scrollTop:0}, 400);
 			});
@@ -222,8 +319,18 @@
 			        header.data('faded', 0).stop(true).fadeTo(400, 0);
 			    }
 			});
+			s*/
 		});
 
+	</script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-39869213-3', 'auto');
+	  ga('send', 'pageview');
 	</script>
 </body>
 </html>
