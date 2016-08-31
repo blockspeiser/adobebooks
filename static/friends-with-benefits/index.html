@@ -22,6 +22,11 @@
               #46AB4E 300px
             );
         }
+        #homeLink {
+            display: block;
+            position: relative;
+            z-index: 100;
+        }
         #logo {
             width: 120px;
             height: 120px;
@@ -232,8 +237,10 @@
     </script>
 </head>
 <body>
-    <img id="logo" src="/img/adobe-logo-large.png">
-    <h2>2015 Membership Drive</h2>
+    <a id="homeLink" href="/home">
+        <img id="logo" src="/img/adobe-logo-large.png">
+    </a>
+    <h2>2016 Membership Drive</h2>
 
     <div id="bannerBox">
         <svg version="1.1" id="banner" preserveAspectRation="true"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" xml:space="preserve">
